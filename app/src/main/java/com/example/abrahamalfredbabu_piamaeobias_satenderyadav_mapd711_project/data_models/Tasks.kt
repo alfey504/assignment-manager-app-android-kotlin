@@ -6,6 +6,7 @@ data class Tasks(
     val id: Int? = null,
     val assignmentId: Int,
     val title: String,
+    val description: String,
     val completed: Boolean,
     val priority: String
 )

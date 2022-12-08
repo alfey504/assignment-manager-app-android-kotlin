@@ -10,6 +10,7 @@ data class TaskEntity(
     @PrimaryKey(autoGenerate = true) val id: Int?,
     @ColumnInfo(name = "assignment_id") val assignmentId: Int,
     @ColumnInfo(name = "title") val title: String,
+    @ColumnInfo(name = "description") val description: String,
     @ColumnInfo(name = "completed") val completed: Boolean,
     @ColumnInfo(name = "priority") val priority: String
 )

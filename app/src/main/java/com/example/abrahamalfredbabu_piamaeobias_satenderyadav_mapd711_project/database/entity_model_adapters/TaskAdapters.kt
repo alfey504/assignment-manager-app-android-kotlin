@@ -10,6 +10,7 @@ class TaskAdapters {
             id = taskEntity.id,
             assignmentId = taskEntity.assignmentId,
             title = taskEntity.title,
+            description = taskEntity.description,
             completed = taskEntity.completed,
             priority = taskEntity.priority
         ))
@@ -29,6 +30,7 @@ class TaskAdapters {
             id = model.id,
             assignmentId = model.assignmentId,
             title = model.title,
+            description= model.description,
             completed = model.completed,
             priority = model.priority
         ))

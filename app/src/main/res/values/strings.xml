@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">AbrahamAlfredBabu_PiaMaeObias_SatenderYadav_ MAPD711_ Project</string>
     <string name="add_task_enter_task">Enter Task</string>
+    <string name="add_task_description">Description</string>
+    <string name="task_page_cancel_button">Cancel</string>
+    <string name="add_task_menu_save_item">Save task</string>
+
+    <array name="priority_list">
+        <item>Select Priority</item>
+        <item>HIGH</item>
+        <item>MEDIUM</item>
+        <item>LOW</item>
+    </array>
+
 </resources>
