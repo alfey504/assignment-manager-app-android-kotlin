@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--    New Task page -->
+    <color name="task_page_edit_text_background">#F1ECE4</color>
+    <color name="task_page_edit_text_text">#273668</color>
+    <color name="task_page_edit_text_hint">#717ca3</color>
+    <color name="task_page_cancel_button_background">#EBA271</color>
+    <color name="task_page_cancel_button_text">#F1ECE4</color>
+
 </resources>
