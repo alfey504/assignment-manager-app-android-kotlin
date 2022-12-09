@@ -1,6 +1,7 @@
 package com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.database_handlers
 
 import android.content.Context
+import androidx.core.content.contentValuesOf
 import com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.data_models.Tasks
 import com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.database.daos.TasksDao
 import com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.database.databases.AssignmentDatabase
@@ -37,6 +38,14 @@ class TaskDatabaseHandler {
         }catch (e: Exception){
             e.printStackTrace()
             return arrayListOf()
+        }
+    }
+
+    suspend fun changeCompletedOfTasks(taskId: Int, completed: Boolean){
+        try {
+            taskDao.updateCompletedOfTask(taskId, completed)
+        }catch (e: Exception){
+            e.printStackTrace()
         }
     }
 

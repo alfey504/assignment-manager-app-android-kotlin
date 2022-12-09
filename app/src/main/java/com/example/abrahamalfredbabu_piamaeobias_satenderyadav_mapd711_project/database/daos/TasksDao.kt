@@ -14,8 +14,8 @@ interface TasksDao {
     @Query("SELECT * FROM tasks_table WHERE assignment_id=:assignmentId")
     suspend fun getTaskOfAssignment(assignmentId: Int): List<TaskEntity>
 
-    @Query("UPDATE  tasks_table SET completed=:completed")
-    suspend fun updateCompletedOfTask(completed: Boolean)
+    @Query("UPDATE  tasks_table SET completed=:completed WHERE id = :taskId")
+    suspend fun updateCompletedOfTask(taskId: Int, completed: Boolean)
 
     @Query("DELETE FROM tasks_table WHERE id=:taskId")
     suspend fun deleteTask(taskId: Int)

@@ -7,6 +7,7 @@ data class Tasks(
     val assignmentId: Int,
     val title: String,
     val description: String,
-    val completed: Boolean,
+    var completed: Boolean,
+    var expandable: Boolean ?= false,
     val priority: String
 )

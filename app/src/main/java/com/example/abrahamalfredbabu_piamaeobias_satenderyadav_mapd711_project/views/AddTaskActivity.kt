@@ -1,4 +1,4 @@
-package com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.activities
+package com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +8,6 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.ArrayAdapter
 import androidx.lifecycle.ViewModelProvider
-import com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.MainActivity
 import com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.R
 import com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.databinding.ActivityAddTaskBinding
 import com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.view_models.AddTaskViewModel
@@ -50,8 +49,8 @@ class AddTaskActivity : AppCompatActivity() {
                 }
 
             }
-            val mainActivityIntent = Intent(this, MainActivity::class.java)
-            startActivity(mainActivityIntent)
+            val tasksListActivityIntent = Intent(this, TasksListActivity::class.java)
+            startActivity(tasksListActivityIntent)
             return true
         }
         return true
@@ -61,8 +60,9 @@ class AddTaskActivity : AppCompatActivity() {
         val adapter = ArrayAdapter.createFromResource(
             this,
             R.array.priority_list,
-            android.R.layout.simple_spinner_dropdown_item
+            R.layout.add_task_priority_spinner_item
         )
+        adapter.setDropDownViewResource(R.layout.add_task_priority_dropdown_item)
         binding.addTaskSetPrioritySpinner.adapter = adapter
 
     }

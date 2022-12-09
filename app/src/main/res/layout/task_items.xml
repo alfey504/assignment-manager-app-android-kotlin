@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="360dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="15dp"
+    android:backgroundTint="@color/sand"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_activity_tasks_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:id="@+id/task_items_title_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/chewy"
+            android:text="Task Name"
+            android:textColor="@color/indigo"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/task_items_priority_textview"
+            app:layout_constraintHorizontal_bias="0.086"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/task_items_priority_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/chewy"
+            android:text="Priority"
+            android:textColor="@color/indigo"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/task_items_checkbox"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/task_items_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:buttonTint="@color/indigo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_activity_expendable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:layout_marginTop="82dp">
+
+        <TextView
+            android:id="@+id/main_activity_description_textview"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/fresca"
+            android:text="Description"
+            android:textColor="@color/indigo"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <CheckBox-->
+    <!--        android:id="@+id/task_items_checkbox"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="50dp" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/task_items_priority_textview"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:fontFamily="@font/chewy"-->
+    <!--        android:text="Priority"-->
+    <!--        android:textColor="@color/indigo"-->
+    <!--        android:textSize="16sp" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="TextView" />-->
+</androidx.cardview.widget.CardView>

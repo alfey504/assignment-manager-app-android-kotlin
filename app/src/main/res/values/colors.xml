@@ -15,4 +15,15 @@
     <color name="task_page_cancel_button_background">#EBA271</color>
     <color name="task_page_cancel_button_text">#F1ECE4</color>
 
+    <!--   Task List page -->
+    <color name="indigo">#273668</color>
+    <color name="fawn">#EBA271</color>
+    <color name="sand">#EBD3AA</color>
+    <color name="alabaster">#F1ECE4</color>
+    <color name="blizzard_blue">#A7EBF4</color>
+    <color name="independence">#4D4C6B</color>
+    <color name="moss_green">#9EA154</color>
+    <color name="arylide_yellow">#ECC976</color>
+    <color name="calamansi">#FAF1A0</color>
+
 </resources>

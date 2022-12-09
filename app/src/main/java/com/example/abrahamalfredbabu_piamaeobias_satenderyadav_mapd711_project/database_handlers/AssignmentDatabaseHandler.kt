@@ -7,11 +7,11 @@ import com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.d
 import com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.database.entities.AssignmentEntity
 import com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.database.entity_model_adapters.AssignmentAdapters
 
-class AssignmentDatabaseHandler {
+class AssignmentDatabaseHandler(context: Context) {
     private var assignmentDatabase : AssignmentDatabase
     private var assignmentDao: AssignmentsDao
 
-    constructor(context: Context){
+    init {
         assignmentDatabase = AssignmentDatabase.getDatabase(context)
         assignmentDao = assignmentDatabase.assignmentsDao()
     }
