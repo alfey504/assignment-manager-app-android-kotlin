@@ -26,10 +26,6 @@
                 android:value="" />
         </activity>
 
-        <activity
-            android:name=".views.AddTaskActivity"
-            android:exported="true"/>
-
     </application>
 
 </manifest>
