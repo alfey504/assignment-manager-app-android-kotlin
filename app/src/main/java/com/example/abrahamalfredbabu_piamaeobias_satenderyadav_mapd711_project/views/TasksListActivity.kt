@@ -8,12 +8,15 @@ import com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.d
 import com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.databinding.ActivityTaskListBinding
 import com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.view_models.TaskListViewModel
 import com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.views.fragments.AddTaskFragment
+import com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.views.recyler_view_adapters.TaskListAdapter
 
 class TasksListActivity: AppCompatActivity() {
     private lateinit var binding: ActivityTaskListBinding
     private lateinit var viewModel: TaskListViewModel
 
     var tasksList = arrayListOf<Tasks>()
+
+    var assignmentId: Int ? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,8 +25,22 @@ class TasksListActivity: AppCompatActivity() {
 
         title = "Tasks"
 
+        val extras = intent.extras
+        if (extras != null) {
+            try{
+                assignmentId = extras.getInt("assignment_id")
+
+            }catch (e: Exception){
+                assignmentId = 1
+                e.printStackTrace()
+            }
+        }else{
+            assignmentId = 1
+        }
+
+
         viewModel = ViewModelProvider(this)[TaskListViewModel::class.java]
-        viewModel.getTask(1, this)
+        viewModel.getTask(assignmentId!!, this)
 
         viewModel.publicTasksList.observe(this) {
             tasksList = copyTaskMaintainingExpandableState(tasksList, it)
@@ -32,9 +49,9 @@ class TasksListActivity: AppCompatActivity() {
             binding.mainActivityTasksRecyclerview.layoutManager = LinearLayoutManager(this)
         }
 
-        binding.mainActivityAddTaskButton.setOnClickListener {
+        binding.tasksListAddTaskButton.setOnClickListener {
             val bundle = Bundle()
-            bundle.putString("assignment_id", "1")
+            bundle.putString("assignment_id", assignmentId.toString())
 
             val addTaskFragment = AddTaskFragment()
             addTaskFragment.arguments = bundle
@@ -45,7 +62,6 @@ class TasksListActivity: AppCompatActivity() {
         val adapter = TaskListAdapter(tasksList, viewModel, this)
         binding.mainActivityTasksRecyclerview.adapter = adapter
         binding.mainActivityTasksRecyclerview.layoutManager = LinearLayoutManager(this)
-
 
     }
 

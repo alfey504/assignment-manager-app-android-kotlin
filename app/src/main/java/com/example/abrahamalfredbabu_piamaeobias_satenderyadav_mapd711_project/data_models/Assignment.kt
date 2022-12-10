@@ -5,6 +5,8 @@ import java.util.Date
 data class Assignment(
     val id: Int? = null,
     val title: String,
-    val subject: String,
+    val description:  String,
+    var expandable : Boolean? = false,
+    val subject: String? = "",
     val dueDate: Date
 )

@@ -1,4 +1,4 @@
-package com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.views
+package com.example.abrahamalfredbabu_piamaeobias_satenderyadav_mapd711_project.views.recyler_view_adapters
 
 import android.content.ContentValues.TAG
 import android.content.Context

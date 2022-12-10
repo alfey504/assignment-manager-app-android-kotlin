@@ -9,6 +9,7 @@ class AssignmentAdapters {
         return (Assignment(
             id = entity.id,
             title = entity.title,
+            description = entity.description,
             subject = entity.subject,
             dueDate = entity.dueDate
         ))
@@ -27,7 +28,8 @@ class AssignmentAdapters {
         return (AssignmentEntity(
             id = assignmentModel.id,
             title = assignmentModel.title,
-            subject = assignmentModel.subject,
+            subject = assignmentModel.subject!!,
+            description = assignmentModel.description,
             dueDate = assignmentModel.dueDate
         ))
     }

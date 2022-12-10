@@ -15,4 +15,16 @@
     <string name="add_task_title">New Task</string>
     <string name="add_task_save_button">SAVE</string>
 
+    <string name="due_date">Due Date</string>
+    <string name="select_date">Select Date</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="new_assignment_title">New Assignment</string>
+    <string name="add_assignment_title_hint">Enter Name</string>
+    <string name="add_assignment_notes_description">Notes/Description</string>
+    <string name="add_assignment_save_button">Save</string>
+    <string name="assignment_list_assignment_title">Assignment Title</string>
+    <string name="assignment_card_description">Description</string>
+    <string name="assignment_list_new_assignment_button">New Assignment</string>
+    <string name="tasks_list_new_task">New Task</string>
+
 </resources>

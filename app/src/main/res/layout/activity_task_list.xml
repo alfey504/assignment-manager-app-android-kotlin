@@ -5,20 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/main_activity_add_task_button"
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
-        android:clickable="true"
-        android:contentDescription="add"
-        android:background="@color/task_page_cancel_button_background"
-        android:focusable="true"
-        android:backgroundTint="@color/sand"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/tasks_list_new_task"
+        android:id="@+id/tasks_list_add_task_button"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?colorOnPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_add_button" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="5dp"
+        android:layout_margin="20dp"
+        app:icon="@drawable/ic_baseline_add_24"
+        app:iconTint="?colorOnPrimary" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/main_activity_tasks_recyclerview"
